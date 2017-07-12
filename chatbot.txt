@@ -1,0 +1,9 @@
+<category><pattern>HI</pattern><template>Hi I'm Benny</template></category>
+
+
+
+<category><pattern>I M SAD</pattern><template>It's alright to feel sad sometimes. Can you tell me more?</template></category>
+
+
+
+<category><pattern>I M SAD</pattern><template>It's alright to feel sad sometimes. Can you tell me more?</template></category>
