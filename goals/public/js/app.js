@@ -38,11 +38,13 @@ var getResponse = function(userInput) {
     url: 'http://localhost:4567/response',
     data: { input: userInput }
   }
-
+  var output
   $.ajax(settings).done(function(response) {
     console.log(response.title);
-    test = response;
+    output = response
+    console.log(output);
   });
+  return output
 }
 
 
@@ -63,9 +65,11 @@ var userInput = document.querySelector('#userInput').value;
 	form.reset();
 
 if (userInput != '') {
+
 	var newP = document.createElement('p');
 	newP.className = 'computer';
 	newP.textContent = getResponse(userInput);
+
 	parent.appendChild(newP);
 }
 
