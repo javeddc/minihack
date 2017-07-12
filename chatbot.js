@@ -38,7 +38,28 @@ var getResponse = function(input) {
 
 
 
+var btn = document.querySelector('#button');
+var parent = document.querySelector('#parent');
+var form = document.querySelector('form');
 
+btn.addEventListener("click", function(event) {
+var userInput = document.querySelector('#userInput').value;
+	var newPara = document.createElement('p');
+	newPara.className = 'user';
+	newPara.textContent = userInput;
+	//console.log(userInput);
+	parent.appendChild(newPara);
+	event.preventDefault();
+	form.reset();
+
+if (userInput != '') {
+	var newP = document.createElement('p');
+	newP.className = 'computer';
+	newP.textContent = getResponse(userInput);
+	parent.appendChild(newP);
+}
+
+});
 
 
 
