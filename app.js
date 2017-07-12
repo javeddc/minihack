@@ -1,13 +1,27 @@
 // var $btn = $('button');
 // $btn.on("click", function(event) {
 
-var btn = document.querySelector('button');
+var btn = document.querySelector('#button');
+var parent = document.querySelector('#parent');
+var form = document.querySelector('form');
 
 btn.addEventListener("click", function(event) {
-var userInput = document.querySelector('input').value;
+var userInput = document.querySelector('#userInput').value;
 	var newPara = document.createElement('p');
+	newPara.className = 'user';
 	newPara.textContent = userInput;
-	document.querySelector('#parent').appendChild(newPara);
+	//console.log(userInput);
+	parent.appendChild(newPara);
+	event.preventDefault();
+	form.reset();
+
+if (userInput != '') {
+	var newP = document.createElement('p');
+	newP.className = 'computer';
+	newP.textContent = 'nice to talk';
+	parent.appendChild(newP);
+}
+
 });
 
 	// event.preventDefault(); /*it will stop bubbling event and stop server to make get request */
